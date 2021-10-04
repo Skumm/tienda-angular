@@ -7,3 +7,15 @@
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency:'EUR': true }}</span>
 </div>
+
+<form [formGroup]="formularioEnvio" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input iD="nombre" type="text" formControlName="nombre">
+  </div>
+  <div>
+    <label for="nombre">Direccion</label>
+    <input iD="direccion" type="text" formControlName="direccion">
+  </div>
+  <button class="button" type="submit">Comprar</button>
+</form>
